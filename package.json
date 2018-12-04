@@ -1,0 +1,27 @@
+{
+  "name": "shorty",
+  "version": "1.0.0",
+  "description": "url shortener",
+  "main": "index.js",
+  "scripts": {
+    "start": "micro",
+    "dev": "micro-dev",
+    "inspect": "node --inspect node_modules/.bin/micro-dev",
+    "test": "''"
+  },
+  "repository": {
+    "type": "git",
+    "url": "''"
+  },
+  "author": "Brandon Cox",
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv": "^6.1.0",
+    "micro-dev": "^3.0.0"
+  },
+  "dependencies": {
+    "airtable": "^0.5.8",
+    "micro": "^9.3.3",
+    "node-fetch": "^2.3.0"
+  }
+}
