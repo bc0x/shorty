@@ -3,7 +3,7 @@ if (process.env.NODE_ENV && process.env.NODE_ENV === 'development') {
   require('dotenv').config()
 }
 
-const getShorties = () => {
+const getAllShorties = () => {
   return new Promise((resolve, reject) => {
     let shorties = [];
     base('SHORTIES').select({
@@ -29,7 +29,6 @@ const getShorties = () => {
         console.error(err);
         reject(err);
       }
-      console.log(shorties)
       resolve(shorties);
     });
   })
@@ -37,5 +36,5 @@ const getShorties = () => {
 }
 
 module.exports = {
-  getShorties
+  getAllShorties
 };

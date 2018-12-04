@@ -1,5 +1,7 @@
-const { getShorties } = require('./getShorties');
+const { getAllShorties } = require('./getAllShorties');
+const { getShorty } = require('./getShorty');
 
 module.exports = {
-  getShorties
+  getShorty,
+  getAllShorties
 }
