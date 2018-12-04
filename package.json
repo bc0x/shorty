@@ -6,8 +6,15 @@
   "scripts": {
     "start": "micro",
     "dev": "micro-dev",
+    "getAllShorties": "micro-dev ./api/getAllShorties",
+    "getShorty": "micro-dev ./api/getShorty",
     "inspect": "node --inspect node_modules/.bin/micro-dev",
     "test": "''"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   },
   "repository": {
     "type": "git",
@@ -17,7 +24,10 @@
   "license": "ISC",
   "devDependencies": {
     "dotenv": "^6.1.0",
-    "micro-dev": "^3.0.0"
+    "husky": "^1.2.0",
+    "micro-dev": "^3.0.0",
+    "prettier": "^1.15.3",
+    "pretty-quick": "^1.8.0"
   },
   "dependencies": {
     "airtable": "^0.5.8",
