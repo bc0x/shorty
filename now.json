@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "build": {
+    "env": {
+      "AIRTABLE_API_KEY": "@airtable-api-key"
+    }
+  },
+  "env": {
+    "AIRTABLE_API_KEY": "@airtable-api-key"
+  },
+  "builds": [
+    { "src": "www/package.json", "use": "@now/next" },
+    { "src": "api/*/*.js", "use": "@now/node" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/(.*)", "dest": "/www/$1" }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "create-shorty",
+  "dependencies": {
+    "airtable": "^0.5.8",
+    "micro": "^9.3.3"
+  }
+}
