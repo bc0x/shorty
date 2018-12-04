@@ -8,14 +8,12 @@ const getAllShorties = () => {
     let shorties = [];
     base("SHORTIES")
       .select({
-        filterByFormula: "AND(Days > 5, Visited)",
         fields: ["ID", "URL"]
       })
       .eachPage(
         function page(records, fetchNextPage) {
           // This function (`page`) will get called for each page of records.
           records.forEach(function(record) {
-            console.log(record.id);
             shorties.push({
               shorty: record.get("ID"),
               url: record.get("URL")

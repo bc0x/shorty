@@ -8,8 +8,9 @@
     "dev": "micro-dev",
     "getAllShorties": "micro-dev ./api/getAllShorties",
     "getShorty": "micro-dev ./api/getShorty",
+    "createShorty": "micro-dev ./api/createShorty",
     "inspect": "node --inspect node_modules/.bin/micro-dev",
-    "test": "''"
+    "test": ""
   },
   "husky": {
     "hooks": {
@@ -18,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "''"
+    "url": "https://github.com/bc0x/shorty.git"
   },
   "author": "Brandon Cox",
   "license": "ISC",
