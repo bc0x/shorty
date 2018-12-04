@@ -4,12 +4,13 @@
   "description": "url shortener",
   "main": "index.js",
   "scripts": {
-    "start": "micro",
+    "start": "micro ./api/getAllShorties",
     "dev": "micro-dev",
     "getAllShorties": "micro-dev ./api/getAllShorties",
     "getShorty": "micro-dev ./api/getShorty",
     "createShorty": "micro-dev ./api/createShorty",
     "inspect": "node --inspect node_modules/.bin/micro-dev",
+    "deploy-test": "now",
     "test": ""
   },
   "husky": {
@@ -26,13 +27,9 @@
   "devDependencies": {
     "dotenv": "^6.1.0",
     "husky": "^1.2.0",
+    "lerna": "^3.5.1",
     "micro-dev": "^3.0.0",
     "prettier": "^1.15.3",
     "pretty-quick": "^1.8.0"
-  },
-  "dependencies": {
-    "airtable": "^0.5.8",
-    "micro": "^9.3.3",
-    "node-fetch": "^2.3.0"
   }
 }

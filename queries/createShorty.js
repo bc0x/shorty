@@ -1,7 +1,7 @@
-const base = require("airtable").base("app5ROBvDWAJQDxcu");
 if (process.env.NODE_ENV && process.env.NODE_ENV === "development") {
   require("dotenv").config();
 }
+const base = require("airtable").base("app5ROBvDWAJQDxcu");
 
 const createShorty = ({ ID, URL, TTL }) => {
   return new Promise((resolve, reject) => {

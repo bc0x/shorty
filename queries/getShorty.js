@@ -1,7 +1,7 @@
-const base = require("airtable").base("app5ROBvDWAJQDxcu");
 if (process.env.NODE_ENV && process.env.NODE_ENV === "development") {
   require("dotenv").config();
 }
+const base = require("airtable").base("app5ROBvDWAJQDxcu");
 
 const getShorty = shorty => {
   const filter = `AND(ID = "${shorty}")`;
@@ -17,7 +17,6 @@ const getShorty = shorty => {
         function page(records, fetchNextPage) {
           // This function (`page`) will get called for each page of records.
           records.forEach(function(record) {
-            console.log(record.id);
             url = {
               iid: record.id,
               ID: record.get("ID"),
