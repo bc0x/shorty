@@ -1,10 +1,5 @@
 {
   "version": 2,
-  "build": {
-    "env": {
-      "AIRTABLE_API_KEY": "@airtable-api-key"
-    }
-  },
   "env": {
     "AIRTABLE_API_KEY": "@airtable-api-key"
   },
@@ -12,6 +7,7 @@
     { "src": "www/package.json", "use": "@now/next" },
     { "src": "api/*/*.js", "use": "@now/node" }
   ],
+  "alias": ["s.bcox.tech"],
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/$1" },
     { "src": "/(.*)", "dest": "/www/$1" }

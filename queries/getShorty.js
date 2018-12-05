@@ -30,6 +30,7 @@ const getShorty = shorty => {
             console.error(err);
             reject(err);
           }
+          console.log(url);
           resolve(url);
         }
       );
