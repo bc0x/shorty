@@ -18,7 +18,7 @@ const getShorty = shorty => {
           // This function (`page`) will get called for each page of records.
           records.forEach(function(record) {
             url = {
-              iid: record.id,
+              aid: record.id,
               ID: record.get("ID"),
               URL: record.get("URL")
             };

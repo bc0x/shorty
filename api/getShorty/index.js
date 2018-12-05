@@ -5,9 +5,7 @@ const { normalizeUrl } = require("./../../util");
 module.exports = async (req, res) => {
   try {
     const shorty = await getShorty(
-      require("url")
-        .parse(req.url)
-        .pathname.substring(test.lastIndexOf("/") + 1)
+      require("url").parse(req.url, true).query.id
     );
     if (shorty && shorty.URL) {
       res.writeHead(301, { Location: `http://${normalizeUrl(shorty.URL)}` });
@@ -16,7 +14,6 @@ module.exports = async (req, res) => {
     send(res, 404);
   } catch (e) {
     console.log(e);
-    res.writeHead(500, { Location: "/error" });
     send(res, 500);
   }
 };

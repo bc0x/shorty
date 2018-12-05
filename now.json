@@ -9,7 +9,9 @@
   ],
   "alias": ["s.bcox.tech"],
   "routes": [
-    { "src": "/api/(.*)", "dest": "/api/$1" },
-    { "src": "/(.*)", "dest": "/www/$1" }
+    { "src": "/", "dest": "/www" },
+    { "src": "/get", "methods": ["GET"], "dest": "/api/getAllShorties" },
+    { "src": "/create/", "methods": ["POST"], "dest": "/api/createShorty" },
+    { "src": "/(.*)", "dest": "/api/getShorty?id=$1" }
   ]
 }

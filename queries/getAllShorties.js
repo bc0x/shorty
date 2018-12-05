@@ -12,8 +12,9 @@ const getAllShorties = () => {
           // This function (`page`) will get called for each page of records.
           records.forEach(function(record) {
             shorties.push({
-              shorty: record.get("ID"),
-              url: record.get("URL")
+              aid: record.id,
+              ID: record.get("ID"),
+              URL: record.get("URL")
             });
           });
           fetchNextPage();
