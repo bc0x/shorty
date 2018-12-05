@@ -3,6 +3,7 @@ const normalizeUrl = url => {
 };
 
 const createId = url => {
+  //hash url to a few chars
   return true;
 };
 
